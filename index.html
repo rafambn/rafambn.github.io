@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Rafael Mendonca">
     <meta name="description" content="Rafael Mendonca's personal site">
-    <meta name="keywords" content="rafael mendonca, rafael, mendonca, android developer, mobile developer, developer">
+    <meta name="keywords" content="rafael mendonca, rafael, mendonca, rafambn, android developer,
+     mobile developer, developer">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="background"></div>
-<div style="display: flex; justify-content: center; align-items: center; flex-direction: column">
-    <div id="circle"></div>
-    <label for="switch" style="color: aquamarine">
-        <input type="checkbox" id="switch"> Dark mode
-    </label>
+<div id="info" class="half-screen">
+    <img src="assets/brazil-flag.png" alt="Brazil Flag" id="my-image">
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+        <div id="sun"  class="dark-mode-button" onclick="enableDarkMode()"></div>
+        <div id="moon" class="dark-mode-button" onclick="disableDarkMode()"></div>
+    </div>
+</div>
+<div id="city" class="half-screen">
+    <label style="color: aquamarine">Test </label>
 </div>
 <script src="theme.js"></script>
 </body>
