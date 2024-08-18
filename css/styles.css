@@ -92,29 +92,23 @@ body {
     background-color: tan; /*remove later*/
 }
 
-#git {
+.hot-air-balloon {
     position: absolute;
     height: 10vh;
-    width: 5vh;
+    object-fit: cover;
+}
+
+#git {
     top: 20vh;
     left: calc(75vw + 5vh);
-    background-color: red; /*remove later*/
 }
 
 #email {
-    position: absolute;
-    height: 10vh;
-    width: 5vh;
     top: 5vh;
     left: 5%;
-    background-color: purple; /*remove later*/
 }
 
 #linkedin {
-    position: absolute;
-    height: 10vh;
-    width: 5vh;
     top: 25vh;
     right: calc(75vw + 2vh);
-    background-color: mediumspringgreen; /*remove later*/
 }
