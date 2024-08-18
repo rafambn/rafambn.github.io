@@ -5,36 +5,18 @@ body {
 
 :root {
     --sky-color: #6bc7f1;
+    --sun-fire: #f8b26a;
+    --sun-core: #f2c55c;
 }
 
 .dark-mode:root {
     --sky-color: #01041b;
 }
 
-/*dark mode*/
-.dark-mode-button {
-    width: 100px;
-    height: 100px;
-    top: calc(min(10%, 50px));
-    border-radius: 50%;
-    position: fixed;
-    transition: right 0.5s ease;
-}
-
-#moon {
-    right: -100px;
-    background-color: #b2bcc5;
-}
-
-#sun {
-    right: 50px;
-    background-color: #f2c55c;
-}
-
 .half-screen {
     position: absolute;
-    width: 100%;
-    height: 50%;
+    width: 100vw;
+    height: 50vh;
     left: 0;
 }
 
@@ -44,21 +26,72 @@ body {
 }
 
 #city {
-    top: 50%;
+    top: 50vh;
     border: 1px solid red;
 }
 
-#circle-link {
-    display: block;
+/*dark mode*/
+.dark-mode-button {
+    position: fixed;
+    height: 10vh;
+    aspect-ratio: 1 / 1;
+    top: 2.5vh;
+    /*border-radius: 50%;*/
+    transition: right 0.5s ease;
+}
+
+#moon {
+    right: -10vh;
+    background-color: #b2bcc5; /*remove later*/
+}
+
+#sun {
+    right: 2.5vh;
+    background-color: #f2c55c; /*remove later*/
 }
 
 #my-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 60%;
-    width: auto;
+    height: 30vh;
+    width: 30vh;
+    top: 5vh;
+    left: calc(50% - 15vh);
     border-radius: 50%;
     object-fit: cover;
-    transform: translate(-50%, -50%);
+}
+
+#my-description {
+    position: absolute;
+    height: 10vh;
+    width: 80vw;
+    top: 40vh;
+    left: 10vw;
+    background-color: tan; /*remove later*/
+}
+
+#git {
+    position: absolute;
+    height: 10vh;
+    width: 5vh;
+    top: 20vh;
+    left: calc(75vw + 5vh);
+    background-color: red; /*remove later*/
+}
+
+#email {
+    position: absolute;
+    height: 10vh;
+    width: 5vh;
+    top: 5vh;
+    left: 5%;
+    background-color: purple; /*remove later*/
+}
+
+#linkedin {
+    position: absolute;
+    height: 10vh;
+    width: 5vh;
+    top: 25vh;
+    right: calc(75vw + 2vh);
+    background-color: mediumspringgreen; /*remove later*/
 }
