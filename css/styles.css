@@ -102,11 +102,27 @@ body {
     background-color: tan; /*remove later*/
 }
 
+/*balloons*/
 .hot-air-balloon {
     position: absolute;
     height: 10vh;
     width: auto;
     object-fit: cover;
+}
+
+#git {
+    top: 20vh;
+    left: calc(75vw + 5vh);
+}
+
+#email {
+    top: 5vh;
+    left: 5%;
+}
+
+#linkedin {
+    top: 25vh;
+    right: calc(75vw + 2vh);
 }
 
 #balloon-rope {
@@ -138,19 +154,4 @@ body {
 
 #balloon-rope, #balloon-basket, #balloon-top-basket, #balloon, #balloon-shadow {
     transition: fill 0.5s ease;
-}
-
-#git {
-    top: 20vh;
-    left: calc(75vw + 5vh);
-}
-
-#email {
-    top: 5vh;
-    left: 5%;
-}
-
-#linkedin {
-    top: 25vh;
-    right: calc(75vw + 2vh);
 }
