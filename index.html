@@ -16,21 +16,54 @@
     <div id="my-description">
         <label>my description</label>
     </div>
-    <div id="sun" class="dark-mode-button" onclick="enableDarkMode()">
-        <div id="sun-core"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation))"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 30deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 60deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 90deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 120deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 150deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 180deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 210deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 240deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 270deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 300deg)"></div>
-        <div class="sun-border" style="rotate: calc(var(--sun-rotation) + 330deg)"></div>
-    </div>
+    <a id="sun" class="dark-mode-button" onclick="enableDarkMode()">
+        <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g id="sun-group">
+                <g id="sun-border">
+                    <g id="small-group">
+                        <path id="small-spike" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                        <path id="small-spike_2" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(22.5, 50, 50)"/>
+                        <path id="small-spike_3" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(67.5, 50, 50)"/>
+                        <path id="small-spike_4" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(112.5, 50, 50)"/>
+                        <path id="small-spike_5" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(157.5, 50, 50)"/>
+                        <path id="small-spike_6" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(202.5, 50, 50)"/>
+                        <path id="small-spike_7" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(247.5, 50, 50)"/>
+                        <path id="small-spike_8" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(292.5, 50, 50)"/>
+                        <path id="small-spike_8" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"
+                              transform="rotate(337.5, 50, 50)"/>
+                    </g>
+                    <g id="tall-group">
+                        <path id="tall-spike" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                        <path id="tall-spike_2" d="M50 3L45 18H55L50 3Z" fill="#F79F0F" transform="rotate(45, 50, 50)"/>
+                        <path id="tall-spike_3" d="M50 3L45 18H55L50 3Z" fill="#F79F0F" transform="rotate(90, 50, 50)"/>
+                        <path id="tall-spike_4" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"
+                              transform="rotate(135, 50, 50)"/>
+                        <path id="tall-spike_5" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"
+                              transform="rotate(180, 50, 50)"/>
+                        <path id="tall-spike_6" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"
+                              transform="rotate(225, 50, 50)"/>
+                        <path id="tall-spike_7" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"
+                              transform="rotate(270, 50, 50)"/>
+                        <path id="tall-spike_8" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"
+                              transform="rotate(315, 50, 50)"/>
+                    </g>
+                </g>
+                <g id="sun-core">
+                    <path d="M28.7868 71.2132C0.502525 42.9289 42.9289 0.502522 71.2132 28.7868L28.7868 71.2132Z"
+                          fill="#DEB700"/>
+                    <path d="M71.2132 28.7868C99.4975 57.0711 57.0711 99.4975 28.7868 71.2132L71.2132 28.7868Z"
+                          fill="#F6CD03"/>
+                </g>
+            </g>
+        </svg>
+    </a>
     <div id="moon" class="dark-mode-button" onclick="disableDarkMode()"></div>
     <a id="git" class="hot-air-balloon" href="https://github.com/rafambn">
         <img src="assets/github-mark.svg" alt="github logo" style="height: 5vh; position:absolute; left: 1vh; top: 1vh">
@@ -58,7 +91,8 @@
         </svg>
     </a>
     <a id="email" class="hot-air-balloon" href="mailto:rafambn@gmail.com">
-        <img src="assets/email-mark.svg" alt="github logo" style="height: 4vh; position:absolute; left: 1.5vh; top: 1.5vh">
+        <img src="assets/email-mark.svg" alt="github logo"
+             style="height: 4vh; position:absolute; left: 1.5vh; top: 1.5vh">
         <svg viewBox="0 0 280 410" xmlns="http://www.w3.org/2000/svg" height="10vh">
             <g id="hot-air-balloon-group">
                 <defs>
@@ -83,7 +117,8 @@
         </svg>
     </a>
     <a id="linkedin" class="hot-air-balloon" href="https://www.linkedin.com/in/rafael-mendonça-5a16b3231/">
-        <img src="assets/linkedln-mark.svg" alt="github logo" style="height: 4vh; position:absolute; left: 1.5vh; top: 1.5vh">
+        <img src="assets/linkedln-mark.svg" alt="github logo"
+             style="height: 4vh; position:absolute; left: 1.5vh; top: 1.5vh">
         <svg viewBox="0 0 280 410" xmlns="http://www.w3.org/2000/svg" height="10vh">
             <g id="hot-air-balloon-group">
                 <defs>

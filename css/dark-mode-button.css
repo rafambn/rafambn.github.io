@@ -26,22 +26,24 @@
     width: 60%;
     top: 20%;
     left: 20%;
-    border-radius: 50%;
-    background-color: #f2c55c;
+    /*animation: sun-rotation 20s linear infinite;*/
 }
 
-.sun-border {
+#sun-border {
     position: absolute;
     height: 1vh;
     width: 1vh;
     top: 5%;
     left: calc(50% - .5vh);
-    background-color: #f8b26a;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform-origin: 50% 4.5vh;
-    transition: rotate 4s ease-in;
+    /*animation: sun-rotation 10s linear infinite;*/
 }
 
-.dark-mode-button:hover .sun-border {
-    --sun-rotation: 360deg;
+@keyframes sun-rotation {
+
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

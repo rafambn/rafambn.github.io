@@ -1,0 +1,32 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="sun">
+        <rect width="100" height="100" fill="white"/>
+        <g id="sun-border">
+            <g id="small-group">
+                <path id="small-spike" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                <path id="small-spike_2" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                <path id="small-spike_3" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                <path id="small-spike_4" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                <path id="small-spike_5" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                <path id="small-spike_6" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                <path id="small-spike_7" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+                <path id="small-spike_8" d="M50 8L45 18H55L50 8Z" fill="#F79F0F"/>
+            </g>
+            <g id="tall-group">
+                <path id="tall-spike" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                <path id="tall-spike_2" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                <path id="tall-spike_3" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                <path id="tall-spike_4" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                <path id="tall-spike_5" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                <path id="tall-spike_6" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                <path id="tall-spike_7" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+                <path id="tall-spike_8" d="M50 3L45 18H55L50 3Z" fill="#F79F0F"/>
+            </g>
+        </g>
+        <g id="sun-core">
+            <path d="M28.7868 71.2132C0.502525 42.9289 42.9289 0.502522 71.2132 28.7868L28.7868 71.2132Z"
+                  fill="#DEB700"/>
+            <path d="M71.2132 28.7868C99.4975 57.0711 57.0711 99.4975 28.7868 71.2132L71.2132 28.7868Z" fill="#F6CD03"/>
+        </g>
+    </g>
+</svg>
