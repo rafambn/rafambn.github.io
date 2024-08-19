@@ -7,13 +7,12 @@
     height: 10vh;
     width: 10vh;
     top: 2.5vh;
-    border-radius: 50%;
     transition: right 0.5s ease;
 }
 
 #moon {
     right: -10vh;
-    background-color: #b2bcc5; /*remove later*/
+    border-radius: 100%;
 }
 
 #sun {
