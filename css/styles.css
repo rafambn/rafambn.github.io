@@ -1,4 +1,5 @@
 @import "balloon.css";
+@import "dark-mode-button.css";
 
 body {
     background-color: var(--sky-color);
@@ -7,7 +8,6 @@ body {
 
 :root {
     --sky-color: #6bc7f1;
-    --sun-rotation: 0deg;
 }
 
 .dark-mode:root {
@@ -28,51 +28,6 @@ body {
 #city {
     top: 50vh;
     background-color: #b2bcc5; /*remove later*/
-}
-
-/*dark mode*/
-.dark-mode-button {
-    position: fixed;
-    height: 10vh;
-    aspect-ratio: 1 / 1;
-    top: 2.5vh;
-    /*border-radius: 50%;*/
-    transition: right 0.5s ease;
-}
-
-#moon {
-    right: -10vh;
-    background-color: #b2bcc5; /*remove later*/
-}
-
-#sun {
-    right: 2.5vh;
-}
-
-#sun-core {
-    position: absolute;
-    height: 60%;
-    width: 60%;
-    top: 20%;
-    left: 20%;
-    border-radius: 50%;
-    background-color: #f2c55c;
-}
-
-.sun-border {
-    position: absolute;
-    height: 1vh;
-    width: 1vh;
-    top: 5%;
-    left: calc(50% - .5vh);
-    background-color: #f8b26a;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform-origin: 50% 4.5vh;
-    transition: rotate 4s ease-in;
-}
-
-.dark-mode-button:hover .sun-border {
-    --sun-rotation: 360deg;
 }
 
 #my-image {
