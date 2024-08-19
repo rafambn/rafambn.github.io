@@ -105,8 +105,38 @@ body {
 .hot-air-balloon {
     position: absolute;
     height: 10vh;
+    width: auto;
     object-fit: cover;
-    transition: background-color 5s ease-in-out;
+}
+
+#balloon-rope {
+    fill: var(--balloon-rope-color);
+}
+
+#balloon-basket {
+    fill: var(--balloon-basket-color);
+}
+
+#balloon-top-basket {
+    fill: var(--balloon-top-basket-color);
+}
+
+#balloon {
+    fill: var(--balloon-color);
+}
+
+#balloon-gradient {
+    stop {
+        stop-color: var(--balloon-shadow-color);
+    }
+}
+
+#balloon-shadow {
+    fill: url(#balloon-gradient);
+}
+
+#balloon-rope, #balloon-basket, #balloon-top-basket, #balloon, #balloon-shadow {
+    transition: fill 0.5s ease;
 }
 
 #git {
