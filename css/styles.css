@@ -1,3 +1,5 @@
+@import "balloon.css";
+
 body {
     background-color: var(--sky-color);
     transition: background-color 0.5s ease;
@@ -5,21 +7,11 @@ body {
 
 :root {
     --sky-color: #6bc7f1;
-    --balloon-shadow-color: #7f2c2c;
-    --balloon-color: #ff5959;
-    --balloon-rope-color: #333e48;
-    --balloon-basket-color: #65513c;
-    --balloon-top-basket-color: #b08876;
     --sun-rotation: 0deg;
 }
 
 .dark-mode:root {
     --sky-color: #01041b;
-    --balloon-shadow-color: #ff5959;
-    --balloon-color: #7f2c2c;
-    --balloon-rope-color: #333e48;
-    --balloon-basket-color: #31281d;
-    --balloon-top-basket-color: #634c42;
 }
 
 .half-screen {
@@ -100,58 +92,4 @@ body {
     top: 40vh;
     left: 10vw;
     background-color: tan; /*remove later*/
-}
-
-/*balloons*/
-.hot-air-balloon {
-    position: absolute;
-    height: 10vh;
-    width: auto;
-    object-fit: cover;
-}
-
-#git {
-    top: 20vh;
-    left: calc(75vw + 5vh);
-}
-
-#email {
-    top: 5vh;
-    left: 5%;
-}
-
-#linkedin {
-    top: 25vh;
-    right: calc(75vw + 2vh);
-}
-
-#balloon-rope {
-    fill: var(--balloon-rope-color);
-}
-
-#balloon-basket {
-    fill: var(--balloon-basket-color);
-}
-
-#balloon-top-basket {
-    fill: var(--balloon-top-basket-color);
-}
-
-#balloon {
-    fill: var(--balloon-color);
-}
-
-#balloon-gradient {
-    stop {
-        stop-color: var(--balloon-shadow-color);
-        transition: stop-color 0.5s ease;
-    }
-}
-
-#balloon-shadow {
-    fill: url(#balloon-gradient);
-}
-
-#balloon-rope, #balloon-basket, #balloon-top-basket, #balloon, #balloon-shadow {
-    transition: fill 0.5s ease;
 }
