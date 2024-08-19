@@ -5,7 +5,7 @@
 .dark-mode-button {
     position: fixed;
     height: 10vh;
-    aspect-ratio: 1 / 1;
+    width: 10vh;
     top: 2.5vh;
     border-radius: 50%;
     transition: right 0.5s ease;
@@ -26,7 +26,8 @@
     width: 60%;
     top: 20%;
     left: 20%;
-    /*animation: sun-rotation 20s linear infinite;*/
+    animation: sun-rotation 10s linear infinite;
+    transform-origin: center;
 }
 
 #sun-border {
@@ -35,11 +36,11 @@
     width: 1vh;
     top: 5%;
     left: calc(50% - .5vh);
-    /*animation: sun-rotation 10s linear infinite;*/
+    animation: sun-rotation 20s linear infinite;
+    transform-origin: center;
 }
 
 @keyframes sun-rotation {
-
     from {
         transform: rotate(0deg);
     }
