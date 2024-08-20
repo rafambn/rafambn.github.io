@@ -28,7 +28,7 @@ body {
 
 #city {
     top: 50vh;
-    background-color: #b2bcc5; /*remove later*/
+    /*background-color: #b2bcc5; !*remove later*!*/
 }
 
 #my-image {
@@ -41,11 +41,11 @@ body {
     object-fit: cover;
 }
 
-#my-description {
+.my-description {
     position: absolute;
     height: 10vh;
     width: 80vw;
     top: 40vh;
     left: 10vw;
-    background-color: tan; /*remove later*/
+    object-fit: cover;
 }
