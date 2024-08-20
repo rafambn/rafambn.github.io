@@ -49,3 +49,24 @@ body {
     left: 10vw;
     object-fit: cover;
 }
+
+@keyframes plane-movement {
+    0% {
+        transform: translateY(-5%);
+    }
+    /*10% {*/
+    /*    transform: translateY(1%);*/
+    /*}*/
+    20% {
+        transform: translateY(-7%);
+    }
+    60% {
+        transform: translateY(9%);
+    }
+    70% {
+        transform: translateY(7%);
+    }
+    100% {
+        transform: translateY(-5%);
+    }
+}
