@@ -41,18 +41,28 @@ body {
     object-fit: cover;
 }
 
-.my-description {
+#airplane-banner {
     position: absolute;
     height: 10vh;
-    width: 80vw;
     top: 40vh;
-    left: 10vw;
+    left: 30%;
     object-fit: cover;
+    /*animation: plane-movement 2s linear infinite*/
+}
+
+#plane {
+    position: absolute;
+    height: 10vh;
+    top: 40vh;
+    right: 70%;
+    object-fit: cover;
+    transform: scale(-1, 1);
+    /*animation: plane-movement 1.9s linear infinite*/
 }
 
 @keyframes plane-movement {
     0% {
-        transform: translateY(-5%);
+        transform: translateY(0);
     }
     /*10% {*/
     /*    transform: translateY(1%);*/
