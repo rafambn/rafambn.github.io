@@ -41,42 +41,40 @@ body {
     object-fit: cover;
 }
 
+#my-description{
+    position: absolute;
+    height: 10vh;
+    left: 600px;
+    top: 35vh;
+    transition: left 1s linear;
+}
+
 #airplane-banner {
     position: absolute;
     height: 10vh;
-    top: 40vh;
-    left: 30%;
+    left: 13vh;
     object-fit: cover;
-    /*animation: plane-movement 2s linear infinite*/
 }
 
 #plane {
     position: absolute;
     height: 10vh;
-    top: 40vh;
-    right: 70%;
+    left: 0;
     object-fit: cover;
-    transform: scale(-1, 1);
-    /*animation: plane-movement 1.9s linear infinite*/
+    animation: plane-movement 2s linear infinite
 }
 
 @keyframes plane-movement {
     0% {
-        transform: translateY(0);
+        transform: translateY(7%);
     }
-    /*10% {*/
-    /*    transform: translateY(1%);*/
-    /*}*/
-    20% {
-        transform: translateY(-7%);
+    35% {
+        transform: translateY(24%);
     }
-    60% {
-        transform: translateY(9%);
-    }
-    70% {
+    90% {
         transform: translateY(7%);
     }
     100% {
-        transform: translateY(-5%);
+        transform: translateY(7%);
     }
 }
