@@ -8,14 +8,17 @@ jobs:
     name: Build Kotlin/Wasm
     runs-on: ubuntu-latest
     steps:
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '17'
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
 
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.0.0
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
 
       - name: Run Gradle Tasks
         run: ./gradlew wasmJsBrowserDistribution
