@@ -83,13 +83,9 @@ internal fun AppTheme(
         LocalThemeIsDark provides isDarkState
     ) {
         val isDark by isDarkState
-        SystemAppearance(!isDark)
         MaterialTheme(
             colorScheme = if (isDark) DarkColorScheme else LightColorScheme,
             content = { Surface(content = content) }
         )
     }
 }
-
-@Composable
-internal expect fun SystemAppearance(isDark: Boolean)
