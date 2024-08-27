@@ -1,6 +1,9 @@
 package com.rafambn
 
 import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.unit.DpSize
+import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.ComposeViewport
 import kotlinx.browser.document
 
@@ -8,6 +11,6 @@ import kotlinx.browser.document
 fun main() {
     val body = document.body ?: return
     ComposeViewport(body) {
-        App()
+        App(DpSize(body.clientWidth.dp, body.offsetHeight.dp))
     }
 }
