@@ -19,11 +19,14 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.toIntSize
 import com.rafambn.theme.PageTheme
 import my_web_page.composeapp.generated.resources.Res
+import my_web_page.composeapp.generated.resources.airplane_banner
 import my_web_page.composeapp.generated.resources.brazil_flag
 import my_web_page.composeapp.generated.resources.email_mark
 import my_web_page.composeapp.generated.resources.github_mark
 import my_web_page.composeapp.generated.resources.linkedln_mark
+import my_web_page.composeapp.generated.resources.plane
 import org.jetbrains.compose.resources.imageResource
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.vectorResource
 
 @Composable
@@ -32,7 +35,7 @@ fun App(windowSizeDp: DpSize) = PageTheme {
         windowSizeDp.toSize().toIntSize()
     }
     Box(
-        Modifier.fillMaxSize().background(color = Color.White)
+        Modifier.fillMaxSize().background(color = Color(66, 135, 245))
     ) {
         Image(
             imageResource(Res.drawable.brazil_flag),
@@ -66,6 +69,18 @@ fun App(windowSizeDp: DpSize) = PageTheme {
             Modifier.align(
                 OffsetAlignment(IntOffset(emailPlacement, windowSizePx.height * 3 / 10))
             )
+        )
+        Image(
+            imageVector = vectorResource(Res.drawable.airplane_banner),
+            contentDescription = "balloon",
+            modifier = Modifier.align(BiasAlignment(0F, -0.2F)).size(windowSizeDp.height * 7 / 20)
+        )
+        val halfBannerWidth = ((windowSizePx.height * 7 / 20) / 2)
+        val ropeAttachWidth = (windowSizePx.height * 1 / 100)
+        Image(
+            imageVector = vectorResource(Res.drawable.plane),
+            contentDescription = "balloon",
+            modifier = Modifier.align(OffsetAlignment(IntOffset(halfWidth + halfBannerWidth - ropeAttachWidth, windowSizePx.height * 39 / 100))).size(windowSizeDp.height * 1 / 10)
         )
     }
 }

@@ -4,18 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
-import my_web_page.composeapp.generated.resources.Res
-import my_web_page.composeapp.generated.resources.email_mark
-import my_web_page.composeapp.generated.resources.github_mark
-import my_web_page.composeapp.generated.resources.linkedln_mark
-import org.jetbrains.compose.resources.vectorResource
-import java.lang.reflect.Modifier
 
 class AppActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
