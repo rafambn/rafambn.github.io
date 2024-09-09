@@ -14,14 +14,6 @@ import org.w3c.dom.Element
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     val body = document.body ?: return
-    val head = document.head ?: return
-    head.appendChild(appendTitle())
-    head.appendChild(appendCharset())
-    head.appendChild(appendCharset())
-    head.appendChild(appendMetaData("viewport", "width=device-width, initial-scale=1.0"))
-    head.appendChild(appendMetaData("author", "Rafael Mendonca"))
-    head.appendChild(appendMetaData("description", "Rafael Mendonca's personal site"))
-    head.appendChild(appendMetaData("keywords", "rafael mendonca, rafael, mendonca, rafambn, android developer, mobile developer, developer"))
     var canvasSize by mutableStateOf(DpSize(body.clientWidth.dp, body.offsetHeight.dp))
     window.onresize = {
         canvasSize = DpSize(window.innerWidth.dp, window.innerHeight.dp)
@@ -30,25 +22,6 @@ fun main() {
         App(canvasSize)
     }
     body.appendChild(appendHeader())
-}
-
-fun appendMetaData(name: String, content: String): Element {
-    val meta = document.createElement("meta")
-    meta.setAttribute("name", name)
-    meta.setAttribute("content", content)
-    return meta
-}
-
-fun appendCharset(): Element {
-    val meta = document.createElement("meta")
-    meta.setAttribute("charset", "UTF-8")
-    return meta
-}
-
-fun appendTitle(): Element {
-    val meta = document.createElement("title")
-    meta.textContent = "Rafael Mendonca"
-    return meta
 }
 
 fun appendHeader(): Element {
