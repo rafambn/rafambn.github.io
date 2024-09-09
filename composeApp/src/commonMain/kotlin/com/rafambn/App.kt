@@ -15,16 +15,14 @@ import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
+import com.rafambn.icons.Banner
+import com.rafambn.icons.EmailMark
+import com.rafambn.icons.GithubMark
+import com.rafambn.icons.LinkedlnMark
 import com.rafambn.theme.PageTheme
 import my_web_page.composeapp.generated.resources.Res
-import my_web_page.composeapp.generated.resources.airplane_banner
 import my_web_page.composeapp.generated.resources.brazil_flag
-import my_web_page.composeapp.generated.resources.email_mark
-import my_web_page.composeapp.generated.resources.github_mark
-import my_web_page.composeapp.generated.resources.linkedln_mark
-import my_web_page.composeapp.generated.resources.plane
 import org.jetbrains.compose.resources.imageResource
-import org.jetbrains.compose.resources.vectorResource
 
 @Composable
 fun App(windowSizeDp: DpSize) = PageTheme {
@@ -34,11 +32,11 @@ fun App(windowSizeDp: DpSize) = PageTheme {
         Image(
             imageResource(Res.drawable.brazil_flag),
             contentDescription = "balloon",
-            modifier = Modifier.align(BiasAlignment(0f, -0.8f))
+            modifier = Modifier.align(BiasAlignment(0f, -0.6F))
                 .size(windowSizeDp.height * 3 / 10)
         )
-        Balloon(
-            vectorResource(Res.drawable.github_mark),
+        SimpleBalloon(
+            GithubMark,
             "https://github.com/rafambn",
             windowSizeDp.height * 1 / 10,
             Modifier.align(
@@ -49,8 +47,8 @@ fun App(windowSizeDp: DpSize) = PageTheme {
                 }
             )
         )
-        Balloon(
-            vectorResource(Res.drawable.linkedln_mark),
+        SimpleBalloon(
+            LinkedlnMark,
             "https://www.linkedin.com/in/rafambn/",
             windowSizeDp.height * 1 / 10,
             Modifier.align(
@@ -59,8 +57,8 @@ fun App(windowSizeDp: DpSize) = PageTheme {
                 }
             )
         )
-        Balloon(
-            vectorResource(Res.drawable.email_mark),
+        SimpleBalloon(
+            EmailMark,
             "mailto:rafambn@gmail.com",
             windowSizeDp.height * 1 / 10,
             Modifier.align(
@@ -70,20 +68,17 @@ fun App(windowSizeDp: DpSize) = PageTheme {
             )
         )
         Image(
-            imageVector = vectorResource(Res.drawable.airplane_banner),
+            imageVector = Banner,
             contentDescription = "balloon",
-            modifier = Modifier.align(BiasAlignment(0F, -0.2F)).size(windowSizeDp.height * 7 / 20)
+            modifier = Modifier.align(BiasAlignment(0F, 0F)).size(windowSizeDp.height * 7 / 20)
         )
-        Image(
-            imageVector = vectorResource(Res.drawable.plane),
-            contentDescription = "balloon",
-            modifier = Modifier
-                .align(
-                    OffsetAlignment { _, space, _ ->
-                        IntOffset(space.width / 2 + (space.height * 7 / 20) / 2 - (space.height * 1 / 100), space.height * 39 / 100)
-                    }
-                )
-                .size(windowSizeDp.height * 1 / 10)
+        ComplexBalloon(
+            null,
+            "https://github.com/rafambn/KMaP",
+            windowSizeDp.height * 2 / 10,
+            Color.Cyan,
+            Color.Blue,
+            modifier = Modifier.align(BiasAlignment(0F, 0.6F)).size(windowSizeDp.height * 7 / 20)
         )
     }
 }
