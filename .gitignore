@@ -1,16 +1,6 @@
-
-*.iml
-.gradle
-.idea
-.kotlin
-.DS_Store
-build
-*/build
-captures
-.externalNativeBuild
-.cxx
-local.properties
-xcuserdata/
-Pods/
-*.jks
-*yarn.lock
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Useful .gitignore templates: https://github.com/github/gitignore
+node_modules
+dist
+.cache
