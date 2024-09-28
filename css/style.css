@@ -7,10 +7,41 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Roboto Light', sans-serif;
 }
 
-img {
+#background-img {
   height: 100%;
   min-width: 100%;
   object-fit: cover;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+#profile-description {
+  font-size: 16px;
+}
+
+#profile {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#profile-pic {
+  position: absolute;
+  height: 18vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
