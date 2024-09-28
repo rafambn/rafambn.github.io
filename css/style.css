@@ -47,12 +47,12 @@ main {
   transform: translate(-50%, -50%);
 }
 
-.contact-link {
+.shirt-anchor {
   position: relative;
   display: inline-block;
 }
 
-.tshirt {
+.shirt {
   height: 10vh;
   margin: 0 10px;
 }
@@ -72,6 +72,15 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.shirt-anchor {
+  transition: transform 0.2s ease-in-out;
+}
+
+.shirt-anchor:hover {
+  transform: scale(1.1);
+}
+
 
 #nav-projects {
   position: absolute;
