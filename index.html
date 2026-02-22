@@ -1,63 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rafael Mendonca</title>
-  <meta name="author" content="Rafael Mendonca">
-  <meta name="description" content="Hi, i'm Rafael Mendonca. Mobile Developer and KMP enthusiast">
-  <meta name="keywords"
-        content="rafael mendonca, rafael, mendonca, rafambn, android developer, mobile developer, developer">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Mendonça - Mobile Developer</title>
+  <meta name="description" content="Hi, i'm Rafael Mendonça. Mobile Developer and KMP enthusiast.">
+  <meta name="author" content="Rafael Mendonça">
+  <meta name="keywords" content="rafael mendonca, rafambn, android developer, mobile developer, kmp, kotlin multiplatform">
 
-  <meta property="og:title" content="Rafambn">
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.rafambn.com">
-  <meta property="og:image" content="">
+  <meta property="og:url" content="https://www.rafambn.com/">
+  <meta property="og:title" content="Rafael Mendonça - Mobile Developer">
+  <meta property="og:description" content="Mobile Developer and KMP Enthusiast. Check out my projects and contributions.">
+  <meta property="og:image" content="https://rafambn.github.io/img/profile-placeholder.png">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<img id="background-img" src="/img/stadium-complex.svg" alt="page-background">
-<main>
-  <div id="profile">
-    <h1>RAFAEL MENDONÇA</h1>
-    <p id="profile-description">MOBILE DEVELOPER and KMP ENTHUSIAST</p>
-  </div>
-  <img id="profile-pic" src="/img/brazil-flag.png" alt="my-profile-pic">
-  <nav id="nav-contacts">
-    <a class="shirt-anchor" href="https://github.com/rafambn">
-      <img class="shirt" src="/img/tshirt.svg" alt="git tshirt">
-      <img class="contacts-mark" src="/img/github-mark.svg" alt="git mark">
-    </a>
-    <a class="shirt-anchor" href="https://www.linkedin.com/in/rafambn">
-      <img class="shirt" src="/img/tshirt.svg" alt="linkedin tshirt">
-      <img class="contacts-mark" src="/img/linkedln-mark.svg" alt="linkedin mark">
-    </a>
-    <a class="shirt-anchor" href="mailto:rafambn@gmail.com">
-      <img class="shirt" src="/img/tshirt.svg" alt="email tshirt">
-      <img class="contacts-mark" src="/img/email-mark.svg" alt="email mark">
-    </a>
-  </nav>
-  <nav id="nav-projects">
-    <a class="shirt-anchor" href="https://framebar.rafambn.com">
-      <img class="shirt" src="/img/tshirt.svg" alt="frameBar">
-      <img class="libraries-mark" src="/img/FrameBar-Logo.svg" alt="framebar mark">
-    </a>
-    <a class="shirt-anchor" href="https://KMaP.rafambn.com">
-      <img class="shirt" src="/img/tshirt.svg" alt="KMaP">
-      <img class="libraries-mark" src="/img/KMaP-Logo.svg" alt="kmap mark">
-    </a>
-    <a class="shirt-anchor" href="https://clickmanager.rafambn.com">
-      <img class="shirt" src="/img/tshirt.svg" alt="clickManager">
-      <img class="libraries-mark" src="/img/ClickManager-Logo.svg" alt="clickmanager mark">
-    </a>
-  </nav>
-</main>
+<div class="bg-aurora">
+  <span class="orb1"></span>
+  <span class="orb2"></span>
+  <span class="noise"></span>
+  <span class="grid-lines"></span>
+</div>
+<div class="container">
+  <header class="profile-section">
+    <div class="profile-content">
+      <div class="avatar-container">
+        <div class="avatar-placeholder">RM</div>
+      </div>
+      <h1>Rafael Mendonça</h1>
+      <h2>Mobile Developer & KMP Enthusiast</h2>
+
+      <div class="social-links">
+        <a href="https://github.com/rafambn" target="_blank" aria-label="GitHub">
+          <img src="assets/social-github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/rafambn" target="_blank" aria-label="LinkedIn">
+          <img src="assets/social-linkedin.svg" alt="LinkedIn">
+        </a>
+        <a href="mailto:rafambn@gmail.com" aria-label="Email">
+          <img src="assets/social-email.svg" alt="Email">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="projects-grid">
+    <!-- Project: KMaP -->
+    <article class="project-card">
+      <div class="card-content">
+        <div class="project-icon">
+          <img src="assets/project-kmap.svg" alt="KMaP Logo">
+        </div>
+        <h3>KMaP</h3>
+        <p class="short-desc">Compose Multiplatform Mapping Library</p>
+        <div class="details">
+          <p>A flexible and powerful mapping library for Compose Multiplatform applications.</p>
+          <a href="https://KMaP.rafambn.com" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project: FrameBar -->
+    <article class="project-card">
+      <div class="card-content">
+        <div class="project-icon">
+          <img src="assets/project-framebar.svg" alt="FrameBar Logo">
+        </div>
+        <h3>FrameBar</h3>
+        <p class="short-desc">KMP Seekbar Component</p>
+        <div class="details">
+          <p>Customizable seekbar component for Compose Multiplatform media applications.</p>
+          <a href="https://framebar.rafambn.com" target="_blank" class="project-link">View Project</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project: KFlate -->
+    <article class="project-card">
+      <div class="card-content">
+        <div class="project-icon">
+          <img src="assets/project-kflate.svg" alt="KFlate Logo">
+        </div>
+        <h3>KFlate</h3>
+        <p class="short-desc">Kotlin Compression Library</p>
+        <div class="details">
+          <p>Kotlin Multiplatform port of fflate for pure DEFLATE, GZIP, and ZLIB compression.</p>
+          <a href="https://github.com/rafambn/KFlate" target="_blank" class="project-link">View Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project: wg-jvm -->
+    <article class="project-card">
+      <div class="card-content">
+        <div class="project-icon">
+          <img src="assets/project-wgjvm.svg" alt="wg-jvm Logo">
+        </div>
+        <h3>wg-jvm</h3>
+        <p class="short-desc">JVM Interface for WireGuard</p>
+        <div class="details">
+          <p>A Kotlin/JVM interface for the WireGuard VPN protocol.</p>
+          <a href="https://github.com/rafambn/wg-jvm" target="_blank" class="project-link">View Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project: KeyManager -->
+    <article class="project-card">
+      <div class="card-content">
+        <div class="project-icon">
+          <img src="assets/project-keymanager.svg" alt="KeyManager Logo">
+        </div>
+        <h3>KeyManager</h3>
+        <p class="short-desc">Keystore Manager Desktop App</p>
+        <div class="details">
+          <p>Keystore manager with Compose UI. Wraps keytool CLI in a modern Kotlin Multiplatform Desktop app.</p>
+          <a href="https://github.com/rafambn/KeyManager" target="_blank" class="project-link">View Repo</a>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>
+
+<script>
+  document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+          // Prevent clicking the link from toggling the card
+          if (e.target.tagName === 'A') return;
+
+          // Toggle active state for mobile "tap to expand" feel
+          const isActive = card.classList.contains('active');
+
+          // Close others
+          document.querySelectorAll('.project-card').forEach(c => {
+              c.classList.remove('active');
+          });
+
+          if (!isActive) {
+              card.classList.add('active');
+          }
+      });
+  });
+</script>
 </body>
 </html>
