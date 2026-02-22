@@ -4,8 +4,8 @@
     --card-border: rgba(255, 255, 255, 0.06);
     --text-primary: #e8e8ef;
     --text-secondary: #8888a0;
-    --accent: #bb86fc;
-    --accent-glow: rgba(187, 134, 252, 0.4);
+    --accent: #b8bec6;
+    --accent-glow: rgba(184, 190, 198, 0.4);
     --card-hover-bg: rgba(255, 255, 255, 0.07);
     --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -20,126 +20,18 @@ html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: var(--bg-color);
+    background: #121212; /* Deep charcoal */
     color: var(--text-primary);
     font-family: var(--font-family);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-/* === ANIMATED AURORA BACKGROUND === */
-.bg-aurora {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.bg-aurora::before,
-.bg-aurora::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.6;
-    will-change: transform;
-}
-
-/* Large purple/violet orb */
-.bg-aurora::before {
-    width: 600px;
-    height: 600px;
-    top: -10%;
-    left: -5%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(88, 28, 235, 0.15) 40%, transparent 70%);
-    animation: orbFloat1 25s ease-in-out infinite;
-}
-
-/* Teal/cyan orb */
-.bg-aurora::after {
-    width: 500px;
-    height: 500px;
-    bottom: -10%;
-    right: -5%;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(20, 184, 166, 0.1) 40%, transparent 70%);
-    animation: orbFloat2 30s ease-in-out infinite;
-}
-
-/* Extra orbs via child spans */
-.bg-aurora .orb1 {
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, rgba(219, 39, 119, 0.08) 40%, transparent 70%);
-    filter: blur(70px);
-    opacity: 0.5;
-    animation: orbFloat3 20s ease-in-out infinite;
-    will-change: transform;
-}
-
-.bg-aurora .orb2 {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    top: 20%;
-    right: 15%;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(67, 56, 202, 0.1) 40%, transparent 70%);
-    filter: blur(60px);
-    opacity: 0.4;
-    animation: orbFloat4 22s ease-in-out infinite;
-    will-change: transform;
-}
-
-@keyframes orbFloat1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(15vw, 20vh) scale(1.1); }
-    50% { transform: translate(5vw, 40vh) scale(0.9); }
-    75% { transform: translate(-10vw, 15vh) scale(1.05); }
-}
-
-@keyframes orbFloat2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(-20vw, -15vh) scale(1.15); }
-    50% { transform: translate(-10vw, -30vh) scale(0.95); }
-    75% { transform: translate(10vw, -10vh) scale(1.1); }
-}
-
-@keyframes orbFloat3 {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); }
-    33% { transform: translate(-30%, -70%) scale(1.2); }
-    66% { transform: translate(-70%, -30%) scale(0.85); }
-}
-
-@keyframes orbFloat4 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-15vw, 20vh) scale(1.15); }
-}
-
-/* Subtle noise/grain texture overlay */
-.bg-aurora .noise {
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 256px 256px;
-    opacity: 0.4;
-    pointer-events: none;
-}
-
-/* Subtle grid lines */
-.bg-aurora .grid-lines {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
-    background-size: 80px 80px;
-    pointer-events: none;
+body {
+    position: relative;
 }
 
 /* === MAIN LAYOUT === */
@@ -179,13 +71,13 @@ html, body {
     height: 90px;
     margin-bottom: 0.75rem;
     border-radius: 50%;
-    background: rgba(187, 134, 252, 0.1);
+    background: rgba(184, 190, 198, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(187, 134, 252, 0.5);
+    border: 2px solid rgba(184, 190, 198, 0.5);
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(187, 134, 252, 0.15);
+    box-shadow: 0 0 30px rgba(184, 190, 198, 0.15);
 }
 
 .avatar-placeholder {
@@ -255,7 +147,7 @@ h2 {
 }
 
 .projects-grid::-webkit-scrollbar-thumb {
-    background: rgba(187, 134, 252, 0.2);
+    background: rgba(184, 190, 198, 0.2);
     border-radius: 2px;
 }
 
@@ -279,11 +171,11 @@ h2 {
 .project-card:hover,
 .project-card.active {
     background-color: var(--card-hover-bg);
-    border-color: rgba(187, 134, 252, 0.15);
+    border-color: rgba(184, 190, 198, 0.15);
     transform: translateY(-3px);
     box-shadow:
-        0 8px 40px rgba(187, 134, 252, 0.08),
-        0 0 0 1px rgba(187, 134, 252, 0.1);
+        0 8px 40px rgba(184, 190, 198, 0.08),
+        0 0 0 1px rgba(184, 190, 198, 0.1);
 }
 
 .card-content {
@@ -345,7 +237,7 @@ h2 {
     padding: 0.35rem 0.9rem;
     font-size: 0.75rem;
     color: var(--accent);
-    border: 1px solid rgba(187, 134, 252, 0.4);
+    border: 1px solid rgba(184, 190, 198, 0.4);
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -442,12 +334,54 @@ h2 {
     }
 }
 
-/* Reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-    .bg-aurora::before,
-    .bg-aurora::after,
-    .bg-aurora .orb1,
-    .bg-aurora .orb2 {
-        animation: none;
+
+
+/* 2. The Topography Layer */
+.bg-topography {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0.1;
+
+    /* Make sure the path matches where you saved the SVG */
+    background-image: url('../assets/background-topography.svg');
+    background-repeat: repeat;
+
+    /* This size dictates how "zoomed in" the map is.
+       Adjust this number to your liking (e.g., 400px, 800px) */
+    background-size: 600px 600px;
+    pointer-events: none;
+
+    /* The animation */
+    animation: panMap 60s linear infinite;
+}
+
+/* 3. The Overlay Layer (Optional but recommended)
+   This adds a subtle dark vignette around the edges of the screen
+   so the map fades out at the edges and brings focus to your cards. */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: radial-gradient(circle at center, transparent 30%, #121212 100%);
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* 4. The Animation Keyframes */
+@keyframes panMap {
+    0% {
+        /* Starts at origin */
+        background-position: 0 0;
+    }
+    100% {
+        /* Moves exactly one tile size diagonally.
+           Must match the background-size above to be seamless! */
+        background-position: -600px 600px;
     }
 }
